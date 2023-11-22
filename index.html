@@ -1,11 +1,488 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>항공권 예약 및 예약정보 | 대한항공</title>
+    <link
+      rel="shortcut icon"
+      href="href=/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/favicon.ico?1"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <header class="header clearfix">
+        <h1 class="logo">
+          <a href="#" class="logo_KoreanAir">
+            <img
+              src="https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/logo--koreanair-pc.png"
+              alt="Korean Air"
+            />
+          </a>
+          <a href="#" target="_blank" class="logo_SkyTeam">
+            <img
+              src="https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/logo--skyteam-pc.png"
+              alt="Sky Team"
+            />
+          </a>
+        </h1>
+        <nav class="member-nav">
+          <h2 class="readable-hidden">사용자 메뉴</h2>
+          <ul>
+            <li>
+              <a href="#" class="util-link login-btn">로그인</a>
+            </li>
+            <li>
+              <a href="#" class="util-link alarm-btn">알람</a>
+            </li>
+            <li>
+              <a href="#" class="util-link cart-btn">장바구니</a>
+            </li>
+            <li>
+              <a href="#" class="util-link search-btn">검색</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="main-nav">
+          <h2 class="readable-hidden">메인메뉴</h2>
+          <ul class="menu">
+            <li class="menu-item">
+              <button>예매</button>
+            </li>
+            <li class="menu-item">
+              <button>공항</button>
+            </li>
+            <li class="menu-item">
+              <button>기내</button>
+            </li>
+            <li class="menu-item">
+              <button>스카이패스</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="route-carousel">
+      <div class="nav_wrapper">
+        <div class="route-carousel__nav">
+          <button class="prevBtn">이전 슬라이드</button>
+          <span class="page">1</span>
+          / 4
+          <button class="nextBtn">다음 슬라이드</button>
+        </div>
+      </div>
+      <div class="route-carousel__wrap">
+        <div
+          aria-roledescription="slide"
+          role="group"
+          aria-label="1 of 4"
+          class="show"
+        >
+          <img
+            src="https://www.koreanair.com/content/dam/koreanair/promotion/selcmd/2022/main-key-visual/map_pc.jpg"
+            alt=""
+          />
+          <div class="carousel_explain_wrapper">
+            <div class="carousel_explain">
+              <p><span>지금 갈 수 있는 여행지는 어디? 얼마?</span></p>
+              <a href="#" class="readmore">자세히 보기</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div
+          aria-roledescription="slide"
+          role="group"
+          aria-label="2 of 4"
+          class="hide"
+        >
+          <img
+            src="https://www.koreanair.com/content/dam/koreanair/ko/main/Budapest_keyvisual_pc_3680x960.jpg"
+            alt=""
+          />
+          <div class="carousel_explain">
+            <p>
+              <span>아름다운 야경과 낭만의 도시</span>
+              <span class="small"
+                >10월 3일 헝가리 부다페스트에 취항합니다.</span
+              >
+            </p>
+            <a href="#" class="readmore">자세히 보기</a>
+          </div>
+        </div>
+        <div
+          aria-roledescription="slide"
+          role="group"
+          aria-label="3 of 4"
+          class="hide"
+        >
+          <img
+            src="https://www.koreanair.com/content/dam/koreanair/promotion/selcmd/2022/main-key-visual/H_PLCC_pc.jpg"
+            alt=""
+          />
+          <div class="carousel_explain">
+            <p><span>알고보면 더 매력적인, 대한항공카드 가이드!</span></p>
+            <a href="#" class="readmore">자세히 보기</a>
+          </div>
+        </div>
+        <div
+          aria-roledescription="slide"
+          role="group"
+          aria-label="4 of 4"
+          class="hide"
+        >
+          <img
+            src="https://www.koreanair.com/content/dam/koreanair/ko/main/keyvisual_pc_sherpa.jpg"
+            alt=""
+          />
+          <div class="carousel_explain">
+            <p>
+              <span>여행지별 입국 요건,</span>
+              <span>이제 지도에서도 확인하실 수 있습니다.</span>
+            </p>
+            <a href="#" class="readmore">자세히 보기</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="wide-top">
+      <div class="quickBooking-wrapper clearfix">
+        <div class="quickBooking">
+          <h2 class="readable-hidden">빠른예매</h2>
+          <div class="quickBooking-tabs">
+            <div class="tab normalTrip">
+              <button>예매</button>
+            </div>
+            <div class="tab bonusTrip">
+              <button>마일리지 예매</button>
+            </div>
+          </div>
+          <div class="tabNormalTrip">
+            <div class="aligner">
+              <fieldset>
+                <legend>왕복 또는 편도 선택</legend>
+                <div class="selection">
+                  <input
+                    type="radio"
+                    id="round-trip"
+                    name="tripType"
+                    value="왕복"
+                  />
+                  <label for="round-trip" class="checked">왕복</label>
+                </div>
+                <div class="selection">
+                  <input
+                    type="radio"
+                    id="one-way"
+                    name="tripType"
+                    value="편도"
+                  />
+                  <label for="one-way">편도</label>
+                </div>
+              </fieldset>
+              <div class="booking-location">
+                <button class="selectBtn selectFrom">
+                  <span class="readable-hidden">출발지 선택</span>
+                  <span class="code">SEL</span><span class="airport">서울</span>
+                </button>
+                <button class="selectBtn selectTo">
+                  <span class="readable-hidden">도착지 선택</span>
+                  <span class="code">To</span
+                  ><span class="airport">도착지</span>
+                </button>
+                <button class="reverseBtn" />
+              </div>
+              <div class="datePicker-wrapper">
+                <button class="datePicker">
+                  <span class="readable-hidden">탑승일</span>
+                  <span class="unselected">
+                    <span>가는 날</span>
+                    <span>~</span>
+                    <span>오는 날</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="passengers">
+              <button>
+                <span class="quickBooking_label">승객 수</span
+                ><span class="quickBooking_select-data">성인 1명</span>
+              </button>
+            </div>
+            <div class="seatClass">
+              <label for="select-seatClass" class="quickBooking_label">
+                좌석등급
+              </label>
+              <select id=""select-seatClass" name="fruits" class="select">
+                <option selected value="apple">일반석</option>
+                <option value="orange">프레스티지석</option>
+                <option value="grape">일등석</option>
+              </select>
+            </div>
+          </div>
+          <div class="checkNearDate">
+            <input type="checkbox" id="checkNearDate" />
+            <label for="checkNearDate">가까운 날짜 함께 조회</label>
+          </div>
+          <div class="quickBooking-options">
+            <button>구매와 동시 승급</button>
+            <button>다구간</button>
+          </div>
+          <div class="search">
+            <button class="searchBtn">항공편 검색</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frequently-used">
+      <h2 class="readable-hidden">자주 사용하는 메뉴 기능</h2>
+      <ul>
+        <li><a href="#">예약조회</a></li>
+        <li><a href="#">체크인</a></li>
+        <li><a href="#">항공편 현황</a></li>
+      </ul>
+    </div>
+    <div class="fst-banner">
+      <a href="#">
+        <span>코로나19 업데이트 센터</span>
+        <p>전 세계 출입국 규정, 항공편 운항 등 코로나19와 관련된 최신 정보를 확인하실 수 있습니다.</p>
+      </a>
+    </div>
+    <div class="trip-carousel-wrapper">
+      <div class="trip-carousel">
+        <h2>지금 떠나기 좋은 여행</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 두바이</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 1,157,500 ~</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 후쿠오카</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 340,200 ~</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 푸껫</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 704,100 ~</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 치앙마이</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 794,100 ~</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 바르셀로나</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 1,546,300 ~</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="location">서울/인천 - 하노이</span>
+              <span class="seat">일반석 왕복</span>
+              <span class="price">KRW 486,900 ~</span>
+            </a>
+          </li>
+        </ul>
+        <button class="prevBtn"><span class="readable-hidden">이전</span></button>
+        <button class="nextBtn"><span class="readable-hidden">다음</span></button>
+      </div>
+    </div>
+    <div class="twoColumns-banner-wrapper">
+      <div class="twoColumns-banner">
+        <a href="#" class="leftLink">
+          <span class="title">최저가 항공권 찾기</span>
+          <p class="text">합리적인 가격의 항공권을 지도를 통해 편리하게 확인하세요.</p>
+        </a>
+        <a href="#" class="rightLink">
+          <span class="title">이벤트 확인하기</span>
+          <p class="text">고객님을 위해 준비된 다채로운 혜택을 확인해보세요.</p>
+        </a>
+      </div>
+    </div>
+    <div class="skypass-grade-information-wrapper">
+      <div class="skypass-grade-information">
+        <img src="https://www.koreanair.com/content/dam/koreanair/promotion/selcmd/2022/mid-banner/edocservice_pc_b.jpg" alt />
+        <div class="information">
+          <span class="title">복잡한 여행을 Easy하게!</span>
+          <p class="desc">전자서식을 작성하시면 여행이 한결 여유로워집니다.</p>
+          <a href="#">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+    <div class="sec-banner">
+      <a href="#">
+        <span>NEW SKYPASS</span>
+        <p>새롭게 개편된 스카이패스가 2023년 4월 시작됩니다.</p>
+      </a>
+    </div>
+    <div class="additional-service-link-wrapper">
+      <div class="additional-service-link">
+        <h2>여행의 완성을 위한 경험</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>대한항공카드</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>호텔</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>렌터카</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>기내 면세점</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>여행자 보험</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"></div>
+              <span>여행 상품</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-menu-wrapper">
+        <div class="footer-menu">
+          <h2 class="readable-hidden">기타 대한항공 안내</h2>
+          <ul class="menus">
+            <li class="column">
+              <h3>회사 소개</h3>
+              <ul>
+                <li><a href="#">대한항공에 대하여</a></li>
+                <li><a href="#">기업지배구조</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">지속가능경영</a></li>
+                <li><a href="#">뉴스룸</a></li>
+              </ul>
+            </li>
+            <li class="column">
+              <h3>고객 지원</h3>
+              <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#">고객의 말씀</a></li>
+                <li><a href="#">서비스 센터</a></li>
+                <li><a href="#">e-서식함</a></li>
+                <li><a href="#">웹 접근성</a></li>
+              </ul>
+            </li>
+            <li class="column">
+              <h3>약관 및 규정</h3>
+              <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">운송약관 및 고지사항</a></li>
+                <li><a href="#">소비자 안전 관련 정보</a></li>
+                <li><a href="#">운임 및 서비스 요금표</a></li>
+              </ul>
+            </li>
+            <li class="column">
+              <h3>기타 안내</h3>
+              <ul>
+                <li><a href="#">초등학생 견학 신청</a></li>
+                <li><a href="#">고객 안내 서비스</a></li>
+                <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                <li><a href="#">항공교통이용자 피해 구제</a></li>
+                <li><a href="#">관련 사이트</a></li>
+                <li><a href="#">사이트맵</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="shortCut_sns">
+            <h3 class="readable-hidden">sns 바로가기</h3>
+            <ul class="sns">
+              <li><a href="#">대한항공 유튜브 새 창 열림</a></li>
+              <li><a href="#">대한항공 인스타그램 새 창 열림</a></li>
+              <li><a href="#">대한항공 페이스북 새 창 열림</a></li>
+              <li><a href="#">대한항공 트위터 새 창 열림</a></li>
+            </ul>
+          </div>
+          <div class="shortcut__appstore">
+            <h3 class="readable-hidden">앱 바로가기</h3>
+            <ul class="appStore">
+              <li><a href="#">구글 플레이 새 창 열림</a></li>
+              <li><a href="#">앱 스토어 새 창 열림</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="language-wrapper">
+        <h2 class="readable-hidden">지역선택 및 언어선택</h2>
+        <div class="lang">
+          <button>
+            <span class="readable-hidden">지역선택 및 언어선택</span>
+            <span class="lang-value">대한민국</span>
+          </button>
+          <ul class="lang-list">
+            <li class="select">한국어</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact clearfix">
+          <h2 class="readable-hidden">대한항공 회사 정보</h2>
+          <div class="info">
+            <div>
+              <strong>(주) 대한항공</strong>
+              <span>대표 : 우기홍 외 1명</span>
+              <span class="borderLeft">주소 : 서울특별시 강서구 하늘길 260</span>
+              <span class="borderLeft">전화 : 1588-2001 / 02-2656-2001</span>
+            </div>
+            <div>
+              <span>사업자등록번호 : 110-81-14794</span>
+              <span class="borderLeft">통신판매업신고 : 강서 제 16-3010</span>
+              <span class="borderLeft">개인정보보호책임자 : 장성현 대한항공 부사장</span>
+            </div>
+          </div>
+          <ul class="certification-marks">
+            <li>
+              <button><span class="readable-hidden">웹 접근성 품질인증 자세히 보기</span></button>
+            </li>
+            <li>
+              <button><span class="readable-hidden">ISMS 자세히 보기</span></button>
+            </li>
+            <li>
+              <a href="#"><span class="readable-hidden">대한항공 항공사 첫 소비자중심경영 CCM 인증 획득</span></a>
+            </li>
+            <li>
+              <a href="#"><span class="readable-hidden"> 대한항공 스카이트랙스 선정 5성 항공사</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 1997-2022 KOREAN AIR</p>
+    </footer>
+  </body>
 </html>
