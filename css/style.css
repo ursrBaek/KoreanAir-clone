@@ -3,7 +3,9 @@
   border-bottom: 1px solid #bababa;
 }
 .header-wrapper .header {
-  width: 128rem;
+  padding: 0 2rem;
+  max-width: 128rem;
+  min-width: 76.8rem;
   margin: 0 auto;
 }
 .header-wrapper .header h1 {
@@ -68,36 +70,42 @@
   background-size: 50px 50px;
 }
 .header-wrapper .header .main-nav {
-  display: flex;
+  width: 350px;
+  margin: 0 auto;
   height: 9rem;
-  justify-content: center;
-  align-items: center;
+  padding-top: 3.5rem;
 }
 .header-wrapper .header .main-nav .menu {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 .header-wrapper .header .main-nav .menu .menu-item button {
   font-size: 1.8rem;
   font-weight: 700;
   background-color: transparent;
-  padding: 0 1.6vw;
   border: 0;
   cursor: pointer;
 }
 
 .route-carousel {
   width: 100%;
+  max-width: 184rem;
+  min-width: 76.8rem;
   padding: 0 2rem;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 .route-carousel .nav_wrapper {
-  width: 128rem;
+  max-width: 128rem;
+  position: relative;
   margin: 0 auto;
 }
 .route-carousel .nav_wrapper .route-carousel__nav {
   position: absolute;
-  bottom: 4rem;
+  left: 1.5rem;
+  top: 40rem;
   background-color: #00000080;
   color: #fff;
   border-radius: 1.5rem;
@@ -127,7 +135,6 @@
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/carousel-icon-next-ctrl.svg);
 }
 .route-carousel .route-carousel__wrap {
-  max-width: 184rem;
   margin: 0 auto;
 }
 .route-carousel .route-carousel__wrap div {
@@ -136,17 +143,19 @@
 .route-carousel .route-carousel__wrap div img {
   width: 100%;
   height: 48rem;
+  object-fit: cover;
 }
 .route-carousel .route-carousel__wrap div .carousel_explain_wrapper {
-  width: 128rem;
+  max-width: 128rem;
   margin: 0 auto;
   position: absolute;
-  left: 0;
+  left: 4rem;
   right: 0;
   top: 12.5rem;
 }
 .route-carousel .route-carousel__wrap div .carousel_explain_wrapper .carousel_explain {
   display: inline-block;
+  text-shadow: 0.1rem 0.1rem 0.3rem #fff;
   z-index: 9999;
 }
 .route-carousel .route-carousel__wrap div .carousel_explain_wrapper .carousel_explain p {
@@ -185,16 +194,20 @@
   position: absolute;
   top: 11rem;
   width: 100%;
-  padding-bottom: 5rem;
+  min-width: 93rem;
+  padding-bottom: 54rem;
   height: 0;
+  overflow: hidden;
 }
 .wide-top .quickBooking-wrapper {
-  width: 128rem;
+  max-width: 128rem;
   margin: 0 auto;
+  min-width: 76.8rem;
 }
 .wide-top .quickBooking-wrapper .quickBooking {
   display: flex;
   padding-bottom: 1.2rem;
+  margin-right: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -468,7 +481,8 @@
 .frequently-used ul {
   display: flex;
   justify-content: center;
-  width: 128rem;
+  max-width: 128rem;
+  min-width: 76.8rem;
   margin: 0 auto;
 }
 .frequently-used ul li {
@@ -517,11 +531,13 @@
 .sec-banner a {
   display: block;
   margin: 0 auto;
-  padding: 3.3rem 32rem 3.3rem 4rem;
-  width: 128rem;
+  padding: 3.3rem 0 3.3rem 4rem;
+  max-width: 128rem;
+  min-width: 76.8rem;
   height: 12rem;
   background-size: cover;
   background-position-y: -1rem;
+  background-position-x: right;
   background-repeat: no-repeat;
   color: #00256c;
 }
@@ -551,10 +567,12 @@
 
 .trip-carousel-wrapper {
   width: 100%;
+  min-width: 76.8rem;
+  padding: 0 2rem;
   background: linear-gradient(to bottom, #fff 29%, #f2f2f8 0%);
 }
 .trip-carousel-wrapper .trip-carousel {
-  width: 128rem;
+  max-width: 128rem;
   margin: 6rem auto 0;
   position: relative;
 }
@@ -566,12 +584,11 @@
 .trip-carousel-wrapper .trip-carousel ul {
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
   overflow: hidden;
 }
 .trip-carousel-wrapper .trip-carousel ul li {
   min-width: 23.2rem;
-  width: calc((100% - 12rem) / 5);
+  width: 19.9rem;
   position: relative;
   border: 1px solid transparent;
 }
@@ -643,21 +660,24 @@
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/mris__button-right.svg);
 }
 
-.twoColumns-banner-wrapper {
+.two-columns-banner-wrapper {
   width: 100%;
+  min-width: 76.8rem;
   padding: 4rem 2rem;
   background-color: #f2f2f8;
 }
-.twoColumns-banner-wrapper .twoColumns-banner {
-  width: 128rem;
+.two-columns-banner-wrapper .two-columns-banner {
+  max-width: 128rem;
   margin: 0 auto;
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between;
 }
-.twoColumns-banner-wrapper .twoColumns-banner a {
+.two-columns-banner-wrapper .two-columns-banner a {
+  display: inline-block;
   background-color: #fff;
   border: 0.1rem solid #fff;
-  width: 62.5rem;
+  width: 49%;
   height: 10.9rem;
   padding: 2.8rem 8.4rem 2.2rem 4rem;
   font-size: 1.6rem;
@@ -666,34 +686,36 @@
   background-repeat: no-repeat;
   background-size: 2.4rem 2.4rem;
 }
-.twoColumns-banner-wrapper .twoColumns-banner a .title {
+.two-columns-banner-wrapper .two-columns-banner a .title {
   font-weight: 700;
 }
-.twoColumns-banner-wrapper .twoColumns-banner a .text {
+.two-columns-banner-wrapper .two-columns-banner a .text {
   margin-top: 1rem;
 }
-.twoColumns-banner-wrapper .twoColumns-banner a:hover {
+.two-columns-banner-wrapper .two-columns-banner a:hover {
   border-color: #0064de;
 }
 
 .skypass-grade-information-wrapper {
   width: 100%;
   margin-top: 6rem;
+  padding: 0 2rem;
   padding-bottom: 5rem;
   position: relative;
 }
 .skypass-grade-information-wrapper .skypass-grade-information {
-  width: 128rem;
+  max-width: 128rem;
+  min-width: 74.8rem;
   margin: 0 auto;
   display: flex;
 }
 .skypass-grade-information-wrapper .skypass-grade-information img {
   width: 62.6rem;
-  height: 30rem;
-  margin-right: 13.7rem;
+  margin-right: 8vw;
 }
 .skypass-grade-information-wrapper .skypass-grade-information .information {
   margin-top: 6rem;
+  padding-right: 2.5rem;
 }
 .skypass-grade-information-wrapper .skypass-grade-information .information .title {
   display: block;
@@ -724,7 +746,8 @@
   bottom: 0;
   background-color: #dcf6fd;
   border-bottom-right-radius: 5rem;
-  width: 52%;
+  width: 50vw;
+  min-width: 67rem;
   height: 28.4rem;
   z-index: -1;
 }
@@ -732,10 +755,11 @@
 .additional-service-link-wrapper {
   width: 100%;
   margin-top: 6rem;
-  padding-bottom: 10rem;
+  min-width: 76.8rem;
+  padding: 0 2rem 10rem 2rem;
 }
 .additional-service-link-wrapper .additional-service-link {
-  width: 128rem;
+  max-width: 128rem;
   margin: 0 auto;
 }
 .additional-service-link-wrapper .additional-service-link h2 {
@@ -745,14 +769,13 @@
   margin-bottom: 2rem;
 }
 .additional-service-link-wrapper .additional-service-link ul {
-  display: flex;
-  justify-content: space-between;
   border: 0.1rem solid #d9dbe1;
   padding: 2.4rem 0 2.8rem 0;
 }
 .additional-service-link-wrapper .additional-service-link ul li {
+  float: left;
   position: relative;
-  width: calc((100%) - 0.5rem / 6);
+  width: calc(((100%) - 1.95rem) / 6);
   padding: 0 1.3rem 0 1.4rem;
 }
 .additional-service-link-wrapper .additional-service-link ul li a {
@@ -810,23 +833,25 @@ footer {
 }
 footer .footer-menu-wrapper {
   width: 100%;
+  min-width: 76.8rem;
+  padding: 0 2rem;
   border-top: 1px solid #d9dbe1;
   background-color: #f3f4f8;
   padding-top: 3.9rem;
   padding-bottom: 3.5rem;
 }
 footer .footer-menu-wrapper .footer-menu {
-  width: 128rem;
+  max-width: 128rem;
   margin: 0 auto;
-  position: relative;
+  display: flex;
 }
 footer .footer-menu-wrapper .footer-menu .menus {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
-  padding-right: 26.57%;
 }
 footer .footer-menu-wrapper .footer-menu .menus .column {
-  width: 25%;
+  width: 26%;
 }
 footer .footer-menu-wrapper .footer-menu .menus .column h3 {
   font-size: 1.6rem;
@@ -843,24 +868,28 @@ footer .footer-menu-wrapper .footer-menu .menus .column li a {
 footer .footer-menu-wrapper .footer-menu .menus .column li a:hover {
   text-decoration: underline;
 }
-footer .footer-menu-wrapper .footer-menu .menus li:nth-child(4) {
+footer .footer-menu-wrapper .footer-menu .menus .column:nth-child(2) {
+  width: 22%;
+}
+footer .footer-menu-wrapper .footer-menu .menus .column:nth-child(4) {
   border-right: 0.1rem solid #d9dbe1;
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns {
-  position: absolute;
-  right: 0;
-  top: 0;
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns {
+  margin-bottom: 2rem;
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns {
-  display: flex;
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li {
+  display: inline-block;
   background-size: 4.4rem 4.4rem;
   background-position: center center;
   background-repeat: no-repeat;
   padding-left: 0.8rem;
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li a {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li a {
   display: block;
   width: 4.4rem;
   height: 4.4rem;
@@ -868,31 +897,26 @@ footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li a {
   white-space: nowrap;
   overflow: hidden;
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li:nth-child(1) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li:nth-child(1) {
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/sns__link--youtube.svg);
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li:nth-child(2) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li:nth-child(2) {
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/sns__link--instagram.svg);
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li:nth-child(3) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li:nth-child(3) {
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/sns__link--facebook.svg);
 }
-footer .footer-menu-wrapper .footer-menu .shortCut_sns .sns li:nth-child(4) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns li:nth-child(4) {
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/sns__link--twitter.svg);
 }
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore {
-  position: absolute;
-  right: 0;
-  top: 5.5rem;
-}
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore .appStore {
   display: flex;
 }
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore li {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore .appStore li {
   background-size: cover;
   margin-left: 1.6rem;
 }
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore li a {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore .appStore li a {
   display: block;
   width: 11.8rem;
   height: 3.4rem;
@@ -900,18 +924,20 @@ footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore li a {
   white-space: nowrap;
   overflow: hidden;
 }
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore li:nth-child(1) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore .appStore li:nth-child(1) {
   background-image: url(https://www.koreanair.com/content/dam/koreanair/ko/main/banner-googleplay.svg);
 }
-footer .footer-menu-wrapper .footer-menu .shortcut__appstore .appStore li:nth-child(2) {
+footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore .appStore li:nth-child(2) {
   background-image: url(https://www.koreanair.com/content/dam/koreanair/ko/main/banner-appstore.svg);
 }
 footer .language-wrapper {
-  width: 128rem;
-  margin: 0 auto;
-  padding: 1.5rem 0;
+  padding: 0 2rem;
 }
 footer .language-wrapper .lang {
+  max-width: 128rem;
+  min-width: 76.8rem;
+  margin: 0 auto;
+  padding: 1.5rem 0;
   display: flex;
   font-size: 1.4rem;
 }
@@ -942,10 +968,11 @@ footer .language-wrapper .lang .lang-list .select {
 footer .contact-wrapper {
   width: 100%;
   border-top: 0.1rem solid #e7eaf0;
-  padding-top: 2rem;
+  padding: 2rem 2rem 0 2rem;
 }
 footer .contact-wrapper .contact {
-  width: 128rem;
+  max-width: 128rem;
+  min-width: 76.8rem;
   margin: 0 auto;
 }
 footer .contact-wrapper .contact .info {
@@ -998,10 +1025,65 @@ footer .contact-wrapper .contact .certification-marks li:nth-child(3) a {
 footer .contact-wrapper .contact .certification-marks li:nth-child(4) a {
   background-image: url(https://www.koreanair.com/etc.clientlibs/koreanair/clientlibs/clientlib-base/resources/images/layout/logo__skytrax-m.png);
 }
-footer .copyright {
-  width: 128rem;
+footer .copyright-wrapper {
+  padding: 0 2rem;
+}
+footer .copyright-wrapper .copyright {
+  max-width: 128rem;
+  min-width: 76.8rem;
   margin: 0.8rem auto;
   font-size: 1.4rem;
+}
+
+@media all and (max-width: 900px) {
+  .header-wrapper .header .main-nav {
+    width: 294px;
+  }
+
+  .two-columns-banner-wrapper .two-columns-banner a {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .skypass-grade-information-wrapper .skypass-grade-information {
+    flex-wrap: wrap;
+  }
+  .skypass-grade-information-wrapper .skypass-grade-information img {
+    width: 100%;
+  }
+  .skypass-grade-information-wrapper .skypass-grade-information .information {
+    padding-left: 2rem;
+  }
+  .skypass-grade-information-wrapper::before {
+    width: calc(100% - 4rem);
+    padding-right: 2rem;
+    min-width: 74.8rem;
+    border-bottom-right-radius: 22rem;
+  }
+
+  footer .footer-menu-wrapper .footer-menu {
+    flex-direction: column;
+  }
+  footer .footer-menu-wrapper .footer-menu .menus .column:nth-child(4) {
+    border-right: 0;
+  }
+  footer .footer-menu-wrapper .footer-menu .shortcut-wrapper {
+    margin-top: 3rem;
+  }
+  footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns {
+    display: inline-block;
+  }
+  footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut-sns .sns {
+    text-align: left;
+    margin: 0;
+  }
+  footer .footer-menu-wrapper .footer-menu .shortcut-wrapper .shortcut__appstore {
+    display: inline-block;
+    vertical-align: top;
+  }
+  footer .contact-wrapper .contact .certification-marks {
+    float: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
