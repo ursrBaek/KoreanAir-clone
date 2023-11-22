@@ -125,6 +125,9 @@ body {
   background-color: #fff;
   color: #181818;
 }
+a, button {
+  cursor: pointer;
+}
 /* float를 해제하기 위한 clear 선언 */
 .clearfix::after {
   content: "";
@@ -142,6 +145,7 @@ legend {
   width: 1px;
   height: 1px;
 }
+
 /* 한 줄 말줄임 표시 */
 .ellipsis {
   /* width: 200px; */
@@ -150,22 +154,13 @@ legend {
   text-overflow: ellipsis;  /* 말줄임 적용 */
 }
 
-.ellipsis2 {
+/* 여러 줄 말줄임 표시 */
+/* -webkit-line-clamp: 표시할 줄 수; 추가할 것 */
+.ellipsis-multiple-lines {
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: keep-all;
-}
-
-.ellipsis3 {
-  overflow: hidden;
-  white-space: normal;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   word-break: keep-all;
 }

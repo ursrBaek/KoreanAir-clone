@@ -85,7 +85,6 @@
   font-weight: 700;
   background-color: transparent;
   border: 0;
-  cursor: pointer;
 }
 
 .route-carousel {
@@ -123,7 +122,6 @@
   background-position: center center;
   background-size: 2.4rem 2.4rem;
   border: 0;
-  cursor: pointer;
 }
 .route-carousel .nav_wrapper .route-carousel__nav button:hover {
   outline: 0.2rem solid blue;
@@ -164,6 +162,7 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 4.5rem;
+  -webkit-line-clamp: 3;
   margin-bottom: 5rem;
 }
 .route-carousel .route-carousel__wrap div .carousel_explain_wrapper .carousel_explain p .small {
@@ -173,7 +172,6 @@
   display: inline-block;
   font-size: 2rem;
   font-weight: 700;
-  cursor: pointer;
 }
 .route-carousel .route-carousel__wrap div .carousel_explain_wrapper .carousel_explain .readmore::after {
   content: "";
@@ -235,7 +233,6 @@
   font-size: 1.6rem;
   background-color: transparent;
   border: 0;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .quickBooking-tabs .tab button:hover {
   text-decoration: underline;
@@ -306,7 +303,6 @@
   border: 0;
   border-radius: 0.4rem;
   background-color: transparent;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .aligner .booking-location .selectBtn .code {
   font-size: 2.6rem;
@@ -331,7 +327,6 @@
   border-radius: 50%;
   width: 4.4rem;
   height: 4.4rem;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .aligner .datePicker-wrapper {
   width: 100%;
@@ -342,10 +337,10 @@
   width: 100%;
   height: 4.8rem;
   border: 0;
+  border-radius: 0.4rem;
   background-color: transparent;
   font-size: 1.6rem;
   color: #727272;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .aligner .datePicker-wrapper .datePicker .unselected {
   position: relative;
@@ -362,7 +357,7 @@
   background-size: 2.9rem 3rem;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .aligner .datePicker-wrapper .datePicker:hover {
-  outline: 0.1rem solid #0064de;
+  outline: 0.15rem solid #0064de;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .quickBooking_label {
   font-size: 1.6rem;
@@ -376,6 +371,7 @@
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .passengers button {
   border: 0;
+  border-radius: 0.4rem;
   background-color: transparent;
   width: 100%;
   display: flex;
@@ -385,14 +381,13 @@
   background-image: url(https://www.koreanair.com/quickbooking__passenger.svg);
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .passengers button .quickBooking_select-data {
   font-size: 1.6rem;
   padding-right: 2.5rem;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .passengers button:hover {
-  outline: 0.1rem solid #0064de;
+  outline: 0.15rem solid #0064de;
 }
 .wide-top .quickBooking-wrapper .quickBooking .tabNormalTrip .seatClass {
   background-color: #fff;
@@ -407,6 +402,7 @@
   border: 0;
   font-size: 1.6rem;
   height: 4.6rem;
+  width: 25rem;
   text-align: right;
 }
 .wide-top .quickBooking-wrapper .quickBooking .checkNearDate {
@@ -439,7 +435,6 @@
   background-image: url(https://www.koreanair.com/ico-right-white.svg);
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .quickBooking-options button:hover {
   outline: 0.15rem solid #fff;
@@ -458,7 +453,6 @@
   width: 100%;
   height: 5rem;
   padding: 1rem 3rem;
-  cursor: pointer;
 }
 .wide-top .quickBooking-wrapper .quickBooking .search .searchBtn:hover {
   outline: 0.2rem solid #fff;
@@ -498,7 +492,6 @@
   font-size: 2rem;
   font-weight: 700;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 .frequently-used ul li a:hover {
   text-decoration: underline;
@@ -646,7 +639,6 @@
   border: 0;
   position: absolute;
   top: 50%;
-  cursor: pointer;
 }
 .trip-carousel-wrapper .trip-carousel button:hover {
   outline: 0.1rem solid #0064de;
@@ -691,6 +683,7 @@
 }
 .two-columns-banner-wrapper .two-columns-banner a .text {
   margin-top: 1rem;
+  -webkit-line-clamp: 2;
 }
 .two-columns-banner-wrapper .two-columns-banner a:hover {
   border-color: #0064de;
